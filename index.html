@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M. Fathi Alfardan | Portofolio TKJ Profesional</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">FATHI.TKJ</a>
+        <nav class="nav-links">
+            <a href="#about">Tentang</a>
+            <a href="#tugas">Proyek</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Mapel ▾</a>
+                <div class="dropdown-content">
+                    <a href="#aij">AIJ</a>
+                    <a href="#tlj">TLJ</a>
+                    <a href="#asj">ASJ</a>
+                </div>
+            </div>
+            <a href="#contact">Kontak</a>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    </header>
+
+    <section class="hero-section" id="hero">
+        <div class="hero-content">
+            <img src="img/Fardan1.jpeg" alt="Foto Profil Muhammad Fathi Alfardan" class="profile-hero-img">
+            <h1>Muhammad Fathi Alfardan</h1>
+            <p class="role-text">Siswa Teknik Komputer dan Jaringan (TKJ)</p>
+            <p class="tagline">"Fokus pada Infrastruktur Jaringan yang Efisien dan Terpercaya."</p>
+            <a href="#tugas" class="cta-button">Lihat Proyek Terbaru</a>
+        </div>
+    </section>
+
+    <section class="section about-section bg-light" id="about">
+        
+        <div class="about-content-top"> 
+
+            <img src="img/Fardan2.jpeg" alt="Foto Profil Muhammad Fathi Alfardan" class="profile-about-img">
+            
+            <div class="about-description-text">
+                <h2>Tentang Saya 👤</h2>
+                <p>Halo, saya <b>Muhammad Fathi Alfardan</b>. Saya seorang siswa TKJ yang bersemangat untuk mendalami dunia <b>Network Engineering</b> dan <b>Administrasi Sistem</b>. Portofolio ini merangkum tugas-tugas inti dan proyek praktikum saya.</p>
+            </div>
+        </div>
+        
+        <div class="about-skills-row">
+            <h3>Keahlian Utama:</h3>
+            <ul class="skill-list">
+                <li>Mikrotik RouterOS</li>
+                <li>Debian Server</li>
+                <li>VoIP & PBX</li>
+                <li>DNS/Web Server</li>
+                <li>Troubleshooting Jaringan</li>
+            </ul>
+        </div>
+
+        <div class="about-skills-row">
+            <h3>Keahlian Sampingan:</h3>
+            <ul class="skill-list">
+                <li>Penguasaan Git Dasar</li>
+                <li>HTML & CSS Dasar</li>
+                <li>Manajemen Konten (CMS)</li>
+                <li>Microsoft Office Suite</li>
+            </ul>
+        </div>
+
+    </section>
+    
+    <section class="section portfolio-section" id="tugas">
+        <h2>Proyek Pilihan 🛠️</h2>
+        <p class="subtitle">Kumpulan tugas yang telah saya implementasikan.</p>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="img/project_akhir.jpg" alt="Proyek Akhir">
+                <h3>Manajemen Hotspot Mikrotik</h3>
+                <p>Konfigurasi Radius Server sederhana dan optimalisasi bandwidth user.</p>
+                <a href="#" target="_blank" class="project-link">Lihat Detail</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="img/tugas_server.jpg" alt="Tugas Server">
+                <h3>Virtual Private Server Setup</h3>
+                <p>Instalasi OS dan konfigurasi dasar SSH, Firewall, dan Web Server.</p>
+                <a href="#" target="_blank" class="project-link">Lihat Laporan</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section mapel-section bg-light" id="aij">
+        <div class="mapel-content">
+            <h2>AIJ (Administrasi Infrastruktur Jaringan)</h2>
+            <p>Dokumentasi praktikum terkait Routing (Static/Dynamic), VLAN, dan Manajemen Trafik Jaringan.</p>
+            <a href="#" class="mapel-link">Lihat Tugas AIJ</a>
+        </div>
+    </section>
+
+    <section class="section mapel-section" id="tlj">
+        <div class="mapel-content">
+            <h2>TLJ (Teknologi Layanan Jaringan)</h2>
+            <p>Laporan praktik konfigurasi PBX server (VoIP) dan simulasi komunikasi real-time.</p>
+            <a href="#" class="mapel-link">Lihat Tugas TLJ</a>
+        </div>
+    </section>
+
+    <section class="section mapel-section bg-light" id="asj">
+        <div class="mapel-content">
+            <h2>ASJ (Administrasi Sistem Jaringan)</h2>
+            <p>Proyek konfigurasi server layanan (DNS, DHCP, Mail Server) menggunakan Linux Debian.</p>
+            <a href="#" class="mapel-link">Lihat Tugas ASJ</a>
+        </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+        <h2>Kontak dan Lokasi 📍</h2>
+        <div class="contact-grid">
+            
+            <div class="contact-form-area">
+                <h3>Kirimkan Pesan Cepat</h3>
+                <form action="#" method="POST" class="contact-form">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Nama Anda" required>
+                        <input type="email" name="email" placeholder="Email Kontak" required>
+                    </div>
+                    <textarea name="message" rows="4" placeholder="Pesan Anda..." required></textarea>
+                    <button type="submit" class="cta-button submit-btn">Kirim Sekarang</button>
+                </form>
+
+                <div class="social-links">
+                    <a href="mailto:emailanda@contoh.com" target="_blank">Email</a>
+                    <a href="https://github.com/akunanda" target="_blank">GitHub</a>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <h3>Lokasi Sekolah/Domisili</h3>
+                <iframe 
+                    src="https://developers.google.com/maps/documentation/javascript/load-maps-js-api5" 
+                    width="100%" 
+                    height="350" 
+                    style="border:0; border-radius: 8px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Muhammad Fathi Alfardan. Portofolio Siswa TKJ.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
