@@ -1,0 +1,189 @@
+/*
+ * File: style.css
+ * Deskripsi: Gaya Galeri Foto & Video Lapangan
+ * Versi: Final & Optimal
+ */
+
+/* ========================================================== */
+/* A. RESET & DASAR                                            */
+/* ========================================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef1f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-top: 0;
+    font-size: 2.8em;
+    font-weight: 700;
+}
+
+/* ========================================================== */
+/* B. GALERI GRID                                              */
+/* ========================================================== */
+.gallery-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 25px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative; /* Penting untuk penempatan ikon */
+}
+
+/* Gambar/Video Thumbnail */
+.gallery-item img,
+.gallery-item video {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Memastikan gambar/video menutupi item */
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+/* Ikon Play untuk Video */
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    color: rgba(255, 255, 255, 0.9);
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    transition: color 0.3s;
+    pointer-events: none;
+}
+
+.gallery-item:hover .play-icon {
+    color: #007bff;
+}
+
+/* ========================================================== */
+/* C. LIGHTBOX (POP-UP)                                        */
+/* ========================================================== */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox-content {
+    position: relative;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media di dalam Lightbox (Foto dan Video) */
+.lightbox-media {
+    max-width: 100%;
+    max-height: 90vh; /* Menggunakan 90% dari viewport height */
+    width: auto;
+    height: auto;
+    object-fit: contain; /* PENTING: Memastikan media terlihat semua */
+    border-radius: 6px;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.close-button:hover {
+    color: #007bff;
+}
+
+/* ========================================================== */
+/* D. RESPONSIF                                                */
+/* ========================================================== */
+
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+    }
+
+    .gallery-item img, .gallery-item video {
+        height: 180px;
+    }
+
+    .lightbox-media {
+        max-height: 80vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+    
+    .gallery-item img, .gallery-item video {
+        height: 220px;
+    }
+    
+    .play-icon {
+        font-size: 3em;
+    }
+}
