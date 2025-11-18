@@ -1,0 +1,151 @@
+/* ========================================================== */
+/* A. Variabel Warna Dasar (Sesuaikan jika ada perubahan global) */
+/* ========================================================== */
+:root {
+    --primary-color: #007bff;        
+    --secondary-color: #212529;       
+    --accent-dark: #1e3c72;           
+    --bg-white: #ffffff;             
+    --bg-light: #f8f9fa;             
+    --border-color: #e9ecef;         
+    --shadow-main: 0 10px 30px rgba(0, 0, 0, 0.08); 
+    --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15); 
+    --text-muted: #6c757d;
+    /* Variabel RGB untuk tombol jika Anda menggunakannya di tempat lain */
+    --rgb-gradient: linear-gradient(90deg, #ff0073 0%, #007bff 50%, #00ff73 100%);
+}
+
+/* ========================================================== */
+/* B. Gaya Umum Section */
+/* ========================================================== */
+.section {
+    padding: 5rem 5%;
+    max-width: 1200px;
+    margin: 30px auto; 
+    background-color: var(--bg-white); 
+    border-radius: 12px;
+    box-shadow: var(--shadow-main); 
+}
+.section.bg-light {
+    background-color: var(--bg-light);
+}
+.subtitle {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--rgb-gradient); /* Menggunakan gaya RGB */
+    color: var(--bg-white);
+    text-decoration: none;
+    border-radius: 50px; 
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+.cta-button:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.6); 
+}
+
+/* ========================================================== */
+/* C. Gaya Task Card ASJ (Detail Struktur Tugas)            */
+/* ========================================================== */
+
+.asj-task-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 2rem;
+}
+
+.task-card {
+    background-color: var(--bg-white);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--primary-color); /* Garis penanda */
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex; /* Untuk memastikan tombol di bawah */
+    flex-direction: column;
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-left-color: #00ff73; /* Efek keren saat hover */
+}
+
+.task-card h3 {
+    font-size: 1.3rem;
+    color: var(--accent-dark);
+    margin-bottom: 0.5rem;
+}
+
+.task-card p {
+    flex-grow: 1; /* Deskripsi mengambil ruang yang tersisa */
+}
+
+.task-details {
+    list-style: none;
+    padding: 10px 0;
+    margin-top: 15px;
+    border-top: 1px dashed var(--border-color);
+    margin-bottom: 20px;
+}
+
+.task-details li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    padding: 5px 0;
+}
+
+.task-details span:first-child {
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+/* Chips Styling (Status & Technology) */
+.status-chip, .tech-chip {
+    padding: 2px 8px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.completed {
+    background-color: #e6ffed; 
+    color: #007c21;
+}
+
+.pending {
+    background-color: #fff3e6; 
+    color: #ff9800;
+}
+
+.tech-chip {
+    background-color: var(--bg-light);
+    color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+}
+
+/* Gaya untuk tombol yang Disabled/Belum Tersedia */
+.cta-button.disabled {
+    pointer-events: none;
+    background: #ccc !important;
+    box-shadow: none !important;
+    color: #666 !important;
+}
+
+/* Responsif untuk Task Grid */
+@media (max-width: 768px) {
+    .asj-task-grid {
+        gap: 20px;
+        grid-template-columns: 1fr;
+    }
+}
