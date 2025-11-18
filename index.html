@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,248 +5,58 @@
     
     <link rel="stylesheet" href="style.css">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-<body>
 
-    <header class="navbar">
-        <a href="#" class="logo">MUHAMMAD FATHI ALARDAN</a>
-        <nav class="nav-links">
-            <a href="#about"><i class="fas fa-user-circle"></i> Tentang</a>
-            <a href="#tugas"><i class="fas fa-tasks"></i> Proyek</a>
-            <div class="dropdown">
-                <a href="#" class="dropbtn"><i class="fas fa-book-open"></i> Mapel ▾</a>
-                <div class="dropdown-content">
-                    <a href="#aij">AIJ</a>
-                    <a href="#tlj">TLJ</a>
-                    <a href="#asj">ASJ</a>
-                </div>
-            </div>
-            <a href="#roadmap"><i class="fas fa-route"></i> Roadmap</a> 
-            <a href="#contact"><i class="fas fa-envelope"></i> Kontak</a>
-        </nav>
-        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-    </header>
-
-    <section class="hero-section" id="hero">
-        <div class="hero-content">
-            <img src="img/Fardan1.jpeg" alt="Foto Profil Muhammad Fathi Alfardan" class="profile-hero-img">
-            
-            <h1>
-                Saya adalah <span id="typing-text"></span><span class="cursor-blink">|</span>
-            </h1> 
-
-            <p class="role-text">Siswa Teknik Komputer dan Jaringan (TKJ)</p>
-            <p class="tagline">"Fokus pada Infrastruktur Jaringan yang Efisien dan Terpercaya."</p>
-            <a href="#tugas" class="cta-button">Lihat Proyek Terbaru <i class="fas fa-arrow-right"></i></a>
-        </div>
-    </section>
-
-    <section class="section about-section" id="about">
+<section class="section mapel-section bg-light" id="asj">
+    <h2>ASJ (Administrasi Sistem Jaringan) ⚙️</h2>
+    <p class="subtitle">Dokumentasi semua tugas ASJ.</p>
+    
+    <div class="asj-task-grid">
         
-        <div class="about-content-top"> 
-            <img src="img/Fardan2.jpeg" alt="Foto Profil Muhammad Fathi Alfardan" class="profile-about-img">
-            
-            <div class="about-description-text">
-                <h2>Tentang Saya 👤</h2>
-                <p>Halo, saya <b>Muhammad Fathi Alfardan</b>. Saya seorang siswa TKJ yang bersemangat untuk mendalami dunia <b>Network Engineering</b> dan <b>Administrasi Sistem</b>. Portofolio ini merangkum tugas-tugas inti dan proyek praktikum saya.</p>
-            </div>
-        </div>
-        
-        <div class="about-skills-row">
-            <h3>Keahlian Utama:</h3>
-            <ul class="skill-list-icon">
-                <li><i class="fas fa-wifi"></i> Mikrotik RouterOS</li>
-                <li><i class="fas fa-server"></i> Debian Server</li>
-                <li><i class="fas fa-phone-alt"></i> VoIP & PBX</li>
-                <li><i class="fas fa-globe"></i> DNS/Web Server</li>
-                <li><i class="fas fa-stethoscope"></i> Troubleshooting Jaringan</li>
+        <div class="task-card">
+            <h3>Tugas 1: 40 Soal</h3>
+            <p>Menjawab semua soal.</p>
+            <ul class="task-details">
+                <li><span>Status:</span> <span class="status-chip completed">Selesai</span></li>
+                <li><span>Pilihan Ganda:</span> <span class="tech-chip">35</span></li>
+                <li><span>Essay:</span> <span class="tech-chip">5</span></li>
             </ul>
+            <a href="40 Soal.pdf" class="task-link cta-button">Lihat Laporan Detail</a>
         </div>
-    
-        <div class="about-skills-row">
-            <h3>Keahlian Lainnya (Teknisi WiFi):</h3>
-            <ul class="skill-list-icon list-icon-tech">
-                <li><i class="fas fa-wrench"></i> Instalasi Jaringan Nirkabel</li>
-                <li><i class="fas fa-satellite-dish"></i> Konfigurasi Access Point</li>
-                <li><i class="fas fa-chart-bar"></i> Analisis Sinyal WiFi</li>
-                <li><i class="fas fa-lock"></i> Keamanan Jaringan Dasar</li>
+        
+        <div class="task-card">
+            <h3>Tugas 2: Web Server dan Virtual Host</h3>
+            <p>Instalasi Apache2 dan pengaturan Virtual Host untuk melayani website **www.fathi.net**.</p>
+            <ul class="task-details">
+                <li><span>Status:</span> <span class="status-chip completed">Selesai</span></li>
+                <li><span>Server:</span> <span class="tech-chip">Apache2</span></li>
+                <li><span>Protokol:</span> <span class="tech-chip">HTTP 80</span></li>
             </ul>
-        </div>
-    
-    </section>
-    
-    <section class="section media-section bg-light" id="media">
-        <h2>Galeri Keahlian🎬</h2>
-        <p class="subtitle">Lihatlah proses kerja dan dokumentasi visual dari proyek-proyek saya.</p>
-    
-        <div class="gallery-grid">
-            <h3>Dokumentasi Foto Lapangan</h3>
-            <div class="photo-grid">
-                <div class="photo-item" style="background-image: url('img/LAN\ AP.jpeg');">
-                    <span class="photo-caption">Instalasi Acces Point di SDN 005 Samarinda</span>
-                </div>
-                <div class="photo-item" style="background-image: url('img/konfigurasi_router.jpg');">
-                    <span class="photo-caption">Konfigurasi Mikrotik</span>
-                </div>
-                <div class="photo-item" style="background-image: url('img/8.jpg');">
-                    <span class="photo-caption">Instalasi ODP</span>
-                </div>
-            </div>
-            <a href="gallery/gallery.html" class="cta-button gallery-btn">Lihat Semua Foto</a>
-        </div>
-    </section>
-    
-    <section class="section portfolio-section" id="tugas">
-        <h2>Proyek Pilihan 🛠️</h2>
-        <p class="subtitle">Kumpulan tugas yang telah saya implementasikan.</p>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <img src="img/project_akhir.jpg" alt="Proyek Akhir">
-                <h3>Manajemen Hotspot Mikrotik</h3>
-                <p>Konfigurasi Radius Server sederhana dan optimalisasi bandwidth user.</p>
-                <a href="#" target="_blank" class="project-link">Lihat Detail <i class="fas fa-external-link-alt"></i></a>
-            </div>
-            <div class="portfolio-item">
-                <img src="img/tugas_server.jpg" alt="Tugas Server">
-                <h3>Virtual Private Server Setup</h3>
-                <p>Instalasi OS dan konfigurasi dasar SSH, Firewall, dan Web Server.</p>
-                <a href="#" target="_blank" class="project-link">Lihat Laporan <i class="fas fa-external-link-alt"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <section class="section mapel-section" id="aij">
-        <div class="mapel-content">
-            <h2><i class="fas fa-network-wired"></i> AIJ (Administrasi Infrastruktur Jaringan)</h2>
-            <p>Dokumentasi praktikum terkait Routing (Static/Dynamic), VLAN, dan Manajemen Trafik Jaringan.</p>
-            <a href="#" class="mapel-link">Lihat Tugas AIJ</a>
-        </div>
-    </section>
-
-    <section class="section mapel-section bg-light" id="tlj">
-        <div class="mapel-content">
-            <h2><i class="fas fa-phone-square-alt"></i> TLJ (Teknologi Layanan Jaringan)</h2>
-            <p>Laporan praktik konfigurasi PBX server (VoIP) dan simulasi komunikasi real-time.</p>
-            <a href="#" class="mapel-link">Lihat Tugas TLJ</a>
-        </div>
-    </section>
-
-    <section class="section mapel-section" id="asj">
-        <div class="mapel-content">
-            <h2><i class="fas fa-cogs"></i> ASJ (Administrasi Sistem Jaringan)</h2>
-            <p>Proyek konfigurasi server layanan (DNS, DHCP, Mail Server) menggunakan Linux Debian.</p>
-            <a href="#" class="mapel-link">Lihat Tugas ASJ</a>
-        </div>
-    </section>
-    
- <section class="section roadmap-section bg-light" id="roadmap">
-    <h2>Roadmap 10 Tahun Sukses di Bidang IT 🚀</h2>
-    <p class="subtitle">Perjalanan dari Mahasiswa Teknik Informatika Polnes hingga Profesional IT Sukses.</p>
-
-    <div class="timeline-container">
-        
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <span class="timeline-date">Tahun 1-2 (Kuliah Polnes)</span>
-                <h3>Adaptasi, Dasar Pemrograman, & Jaringan</h3>
-                <p>Menguasai mata kuliah dasar (Algoritma, Pemrograman Prosedural & OOP, Basis Data, Jaringan Komputer). Membangun logika berpikir komputasi yang kuat.</p>
-                <ul class="roadmap-skill-list">
-                    <li><i class="fas fa-check-circle"></i> Kuasai Python/Java/C++ Dasar</li>
-                    <li><i class="fas fa-check-circle"></i> Proyek Mandiri Sederhana (Web/App)</li>
-                    <li><i class="fas fa-check-circle"></i> Jaringan Polinesia (Komunitas IT Kampus)</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <span class="timeline-date">Tahun 3-4 (Magang & Lulus)</span>
-                <h3>Spesialisasi, Magang, & Portofolio Profesional</h3>
-                <p>Memilih jalur spesialisasi (misal: WebDev, Data, atau CyberSec*). Mengikuti program magang (proyek nyata) untuk aplikasi ilmu vokasi. Menyusun Tugas Akhir inovatif.</p>
-                <ul class="roadmap-skill-list">
-                    <li><i class="fas fa-check-circle"></i> Pengalaman Magang Industri 3-6 Bulan</li>
-                    <li><i class="fas fa-check-circle"></i> Portofolio Siap Kerja di GitHub/Website</li>
-                    <li><i class="fas fa-check-circle"></i> Lulus D4/S.Tr. Teknik Informatika</li>
-                </ul>
-            </div>
+            <a href="#" class="task-link cta-button disabled">Belum Tersedia</a>
         </div>
         
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <span class="timeline-date">Tahun 5-7 (Karir Junior ke Mid-Level)</span>
-                <h3>Konsolidasi Karir & Penguasaan Spesialisasi</h3>
-                <p>Bekerja sebagai Junior Specialist dan bertransisi ke Mid-Level. Fokus mendalami satu teknologi dan meraih sertifikasi profesional yang diakui industri (misal: AWS/Azure Associate, Google Cloud, dsb.).</p>
-                <ul class="roadmap-skill-list">
-                    <li><i class="fas fa-check-circle"></i> Promosi/Pindah ke Posisi Mid-Level</li>
-                    <li><i class="fas fa-check-circle"></i> Sertifikasi Profesional (Level Associate)</li>
-                    <li><i class="fas fa-check-circle"></i> Kuasai 1 Tech Stack Secara Mendalam</li>
-                </ul>
-            </div>
+        <div class="task-card">
+            <h3>Tugas 3: Dynamic Host Configuration Protocol (DHCP)</h3>
+            <p>Konfigurasi ISC DHCP Server untuk membagikan IP dinamis di subnet 192.168.10.x/24.</p>
+            <ul class="task-details">
+                <li><span>Status:</span> <span class="status-chip completed">Selesai</span></li>
+                <li><span>Server:</span> <span class="tech-chip">ISC DHCP</span></li>
+                <li><span>Protokol:</span> <span class="tech-chip">UDP 67/68</span></li>
+            </ul>
+            <a href="#" class="task-link cta-button disabled">Belum Tersedia</a>
         </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <span class="timeline-date">Tahun 8-10 (Senior & Kepemimpinan)</span>
-                <h3>Senior Engineer, Strategi, dan Definisi Sukses</h3>
-                <p>Mencapai posisi Senior Engineer atau Team Lead. Mulai terlibat dalam arsitektur sistem dan strategi bisnis. Memutuskan antara jalur manajemen, konsultan, atau technopreneur.</p>
-                <ul class="roadmap-skill-list">
-                    <li><i class="fas fa-check-circle"></i> Posisi Senior/Team Lead/IT Manager</li>
-                    <li><i class="fas fa-check-circle"></i> Mampu Mentoring dan Mengembangkan Tim</li>
-                    <li><i class="fas fa-check-circle"></i> Menguasai Soft Skill Kepemimpinan</li>
-                </ul>
-            </div>
+        
+        <div class="task-card">
+            <h3>Tugas 4: Mail Server (PostFix & Dovecot)</h3>
+            <p>Konfigurasi server email untuk pengiriman dan penerimaan pesan internal.</p>
+            <ul class="task-details">
+                <li><span>Status:</span> <span class="status-chip pending">Proses</span></li>
+                <li><span>Server:</span> <span class="tech-chip">PostFix/Dovecot</span></li>
+                <li><span>Protokol:</span> <span class="tech-chip">SMTP/POP3/IMAP</span></li>
+            </ul>
+            <a href="#" class="task-link cta-button disabled">Belum Tersedia</a>
         </div>
-
+        
     </div>
 </section>
-
-    <section class="section contact-section" id="contact">
-        <h2>Kontak dan Lokasi 📍</h2>
-        <div class="contact-grid">
-            
-            <div class="contact-form-area">
-                <h3>Kirimkan Pesan Cepat</h3>
-                <form action="#" method="POST" class="contact-form">
-                    <div class="form-row">
-                        <input type="text" name="name" placeholder="Nama Anda" required>
-                        <input type="email" name="email" placeholder="Email Kontak" required>
-                    </div>
-                    <textarea name="message" rows="4" placeholder="Pesan Anda..." required></textarea>
-                    <button type="submit" class="cta-button submit-btn">Kirim Sekarang</button>
-                </form>
-
-                <div class="social-links">
-                    <a href="mailto:emailanda@contoh.com" target="_blank"><i class="fas fa-at"></i> Email</a>
-                    <a href="https://github.com/akunanda" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                </div>
-            </div>
-
-            <div class="map-container">
-                <h3>Lokasi Sekolah/Domisili</h3>
-                <iframe 
-                    src="https://developers.google.com/maps/documentation/javascript/load-maps-js-api5" 
-                    width="100%" 
-                    height="350" 
-                    style="border:0; border-radius: 8px;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2024 Muhammad Fathi Alfardan. Portofolio Siswa TKJ.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
